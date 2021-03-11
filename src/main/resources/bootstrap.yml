@@ -1,0 +1,15 @@
+server:
+  port: 8072
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+        namespace: 589f047a-45b5-4878-8fd4-61daa2652344
+      username: nacos
+      password: nacos
