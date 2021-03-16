@@ -10,13 +10,6 @@ spring:
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
         file-extension: yml
-        shared-configs:
-          - data-id: log.yml
-            group: DEFAULT_GROUP
-            refresh: true
-        extension-configs:
-          - data-id: db.yml
-            group: DEFAULT_GROUP
-            refresh: true
+        namespace: 589f047a-45b5-4878-8fd4-61daa2652344
       username: nacos
       password: nacos

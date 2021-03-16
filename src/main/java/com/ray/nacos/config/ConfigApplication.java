@@ -29,4 +29,22 @@ public class ConfigApplication {
             return "hi " + userName;
         }
     }
+
+    @RestController
+    @RefreshScope
+    public class ExtConfigClass {
+        @Value("${db.pool}")
+        private int poolSize;
+
+        @Value("${http.encoding}")
+        private String encoding;
+
+        @Value("${log.file}")
+        private String logFile;
+
+        @GetMapping("/ext/config")
+        public String config() {
+            return "poolSize: " + poolSize + ", encoding: " + encoding + ", logFile: " + logFile;
+        }
+    }
 }
